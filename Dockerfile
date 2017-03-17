@@ -8,8 +8,8 @@ RUN wget --quiet --no-check-certificate -O - https://www.postgresql.org/media/ke
 RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main" > /etc/apt/sources.list.d/pgdg.list
 RUN apt-get update
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install pgbouncer net-tools vim
-ADD run.sh /usr/local/bin/run
+ADD entrypoint.sh /usr/local/bin/entrypoint
 
-RUN chmod +x /usr/local/bin/run
+RUN chmod +x /usr/local/bin/entrypoint
 EXPOSE 6432
-CMD ["/usr/local/bin/run"]
+CMD ["/usr/local/bin/entrypoint"]
