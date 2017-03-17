@@ -23,6 +23,7 @@ max_client_conn = ${MAX_CLIENT_CONN:-10000}
 default_pool_size = ${DEFAULT_POOL_SIZE:-400}
 ignore_startup_parameters = extra_float_digits
 server_idle_timeout = ${SERVER_IDLE_TIMEOUT:-240}
+application_name_add_host = ${APPLICATION_NAME_ADD_HOST:-0}
 EOF
 fi
 
